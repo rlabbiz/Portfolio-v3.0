@@ -3,6 +3,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    height: 80px;
+    overflow: hidden;
+    position: fixed;
+    width: 1500px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
 /* style of logo png */
@@ -20,5 +28,38 @@
     margin-right: 48px;
     color: inherit;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
+
+.header .links a:hover {
+    color: var(--hover-color);
+}
+
+.header .links a:last-child {
+    margin-right: 0;
+}
+
+.header .last-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .last-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+/* style for langue icon */
+.header .last-links span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    cursor: pointer;
+    width: 100px;
+    display: block;
+}
+

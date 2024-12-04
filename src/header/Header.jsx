@@ -9,8 +9,26 @@ import Logo from './logo.png';
 import SunMode from './sun.png';
 import MoonMode from './moon.png';
 
-export const Header = () => {
+export const Header = (props) => {
+    console.log(props);
+    return (
+        <div className="header container">
+            <div className="logo">
+                <img src={Logo} alt="Rlabbiz's Logo"  width="150px"  />
+            </div>
 
+            <div className="links">
+                <Link to="/">{props.data?.header?.home}</Link>
+                <Link to="/about">{props.data?.header?.about}</Link>
+                <Link to="/contact">{props.data?.header?.contact}</Link>
+            </div>
+
+            <SwitchModes obj={props.languageObj} />
+        </div>
+    )
+}
+
+const SwitchModes = ({ obj }) => {
     const [darkMode, setDarkMode] = useState(false);
     const darkLink = useRef();
 
@@ -28,20 +46,12 @@ export const Header = () => {
     }
 
     return (
-        <div className="header container">
-            <div className="logo">
-                <img src={Logo} alt="Rlabbiz's Logo"  width="150px"  />
-            </div>
-
-            <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/contact">Contact</Link>
-            </div>
-            
-            <div className="dark-link">
-                <img ref={darkLink} src={MoonMode} alt="Switch Mode's Icon" onClick={handleDarkMode} />
+        <div className="last-links">
+            <img src={MoonMode} alt="Sun Mode" ref={darkLink} onClick={handleDarkMode} />
+            <div className="language">
+                <span ref={obj.languageRef} onClick={obj.handleLanguageSwitch}>{obj.language === 'en' ? "Fr" : "En" }</span>
             </div>
         </div>
     )
 }
+
