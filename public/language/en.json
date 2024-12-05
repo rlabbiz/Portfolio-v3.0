@@ -4,5 +4,13 @@
         "about": "About",
         "services": "Services",
         "contact": "Contact"
+    },
+    "home": {
+        "title": "Rida Labbiz",
+        "firstName": "Rida",
+        "lastName": "Labbiz",
+        "subtitle": "Full Stack Developer",
+        "button": "Read Resume",
+        "scroll": "Scroll Down"
     }
 }

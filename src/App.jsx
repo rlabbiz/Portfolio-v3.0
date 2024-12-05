@@ -2,6 +2,7 @@ import './App.css';
 import { Header } from './header/Header';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
+import { Home } from './home/Home';
 
 let data = null
 
@@ -14,7 +15,7 @@ function App() {
   const handleLanguage = () => {
     setLanguage((prev) => {
       if (prev.language === 'en') {
-        return {language: 'fr', isLoading: true};
+        return {language: 'fr'  , isLoading: true};
       } else {
         return {language: 'en', isLoading: true}
       }
@@ -44,16 +45,20 @@ function App() {
   }
 
   return (
+    
     <Router>
+      <Header 
+        languageObj={{
+          language: language.language,
+          handleLanguageSwitch: handleLanguage,
+        }}
+        data={data}
+      />
       <Routes>
         <Route 
           path="/" exact 
           element={
-            <Header 
-              languageObj={{
-                language: language.language,
-                handleLanguageSwitch: handleLanguage,
-              }}
+            <Home
               data={data}
             />
           }
