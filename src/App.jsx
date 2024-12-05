@@ -10,24 +10,18 @@ function App() {
 
   // handle language switch
   const [language, setLanguage] = useState({language: 'en', isLoading: true});
-  const languageRef = useRef();
 
   const handleLanguage = () => {
     setLanguage((prev) => {
       if (prev.language === 'en') {
-        languageRef.current.innerText = 'En';
         return {language: 'fr', isLoading: true};
       } else {
-        languageRef.current.innerText = 'Fr';
         return {language: 'en', isLoading: true}
       }
     })
   }
 
-
-
   // fetch data from data.json based on language
-
   const fetchData = async () => {
     await fetch(`/language/${language.language}.json`, {})
       .then(res => res.json())
@@ -59,7 +53,6 @@ function App() {
               languageObj={{
                 language: language.language,
                 handleLanguageSwitch: handleLanguage,
-                languageRef: languageRef,
               }}
               data={data}
             />

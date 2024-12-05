@@ -49,7 +49,7 @@ const SwitchModes = ({ obj }) => {
         <div className="last-links">
             <img src={MoonMode} alt="Sun Mode" ref={darkLink} onClick={handleDarkMode} />
             <div className="language">
-                <span ref={obj.languageRef} onClick={obj.handleLanguageSwitch}>{obj.language === 'en' ? "Fr" : "En" }</span>
+                <span onClick={obj.handleLanguageSwitch}>{obj.language === 'en' ? "Fr" : "En" }</span>
             </div>
         </div>
     )
