@@ -1,96 +1,48 @@
-.home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.about { 
+    background-color: #f8f9fa;
+    padding: 50px 0;
     height: 100vh;
-    position: relative;
-    visibility: hidden;
+    width: 100%;
 }
 
-.current {
-    visibility: visible;
-}
-
-.home h1 {
-    font-size: 3rem;
-}
-
-.home h1 span {
-    color: var(--primary-color);
-}
-
-.home p.sub-title {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-}
-
-.home a {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    cursor: pointer;
-    transition: all ease-in-out 0.3s;
-    margin-top: 2rem;
-}
-
-.home a:hover {
-    background-color: var(--hover-color);
-    transform: scale(1.05) translateY(-5px) translateX(2px) rotate(2deg) skew(2deg);
-}
-
-.home .bottom-arrow {
-    position: absolute;
-    bottom: 20px;
-    color: var(--primary-color);
-    cursor: pointer;
-    font-size: 1.2rem;
-    animation: bounce 2s infinite;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.home .bottom-arrow img {
-    width: 30px;
-    height: 30px;
-    margin-top: 10px;
-}
-
-/*  */
-
-.gsap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.more-space {
+    margin-top: 100px;
+    width: 100%;
     height: 100vh;
-    position: relative;
-    visibility: visible;
+    overflow: hidden;
 }
 
-.gsap .box {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: var(--primary-color);
-    margin-top: 2rem;
+.header-section {
+    position: sticky;
+    top: 0;
+    z-index: -1;
     left: 0;
-    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-section .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.header-section .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }

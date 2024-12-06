@@ -5,7 +5,7 @@
   word-spacing: break-word;
 }
 :root {
-  --text-color: #333;
+  --text-color: white;
   --background-color: #f5f5f5;
   --primary-color: #f4931d;
   --secondary-color: #6c757d;
@@ -30,15 +30,15 @@ body {
 }
 
 body.light-mode  {
-  --text-color: #333;
+  --text-color: white;
   --background-color: #f5f5f5;
   --hover-color: #0056b3;
 }
 
 body.dark-mode {
-  --text-color: #f5f5f5;
-  --background-color: #333;
-  --hover-color: #f5f5f5;
+  --text-color: white;
+  --background-color: #1B262C;
+  --hover-color: #0F4C75;
 }
 
 code {

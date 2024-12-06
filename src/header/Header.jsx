@@ -10,7 +10,6 @@ import SunMode from './sun.png';
 import MoonMode from './moon.png';
 
 export const Header = (props) => {
-    console.log(props);
     return (
         <div className="header container">
             <div className="logo">
